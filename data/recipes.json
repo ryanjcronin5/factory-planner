@@ -1,0 +1,46 @@
+{
+  "raw_resources": ["iron_ore", "copper_ore"],
+  "machines": {
+    "smelter": {},
+    "assembler": {}
+  },
+  "recipes": {
+    "iron_plate": {
+      "machine": "smelter",
+      "time": 2,
+      "output": 1,
+      "inputs": { "iron_ore": 1 }
+    },
+    "copper_plate": {
+      "machine": "smelter",
+      "time": 2,
+      "output": 1,
+      "inputs": { "copper_ore": 1 }
+    },
+
+    "copper_wire": {
+      "machine": "assembler",
+      "time": 1,
+      "output": 2,
+      "inputs": { "copper_plate": 1 }
+    },
+    "gear": {
+      "machine": "assembler",
+      "time": 0.25,
+      "output": 1,
+      "inputs": { "iron_plate": 2 }
+    },
+    "control_board": {
+      "machine": "assembler",
+      "time": 3,
+      "output": 1,
+      "inputs": { "iron_plate": 1, "copper_wire": 2 }
+    },
+    "motor": {
+      "machine": "assembler",
+      "time": 2,
+      "output": 0.333,
+      "inputs": { "gear": 2, "control_board": 1 }
+    }
+  }
+}
