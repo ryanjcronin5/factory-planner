@@ -26,7 +26,7 @@
     },
     "gear": {
       "machine": "assembler",
-      "time": 0.25,
+      "time": 1,
       "output": 1,
       "inputs": { "iron_plate": 2 }
     },
@@ -38,8 +38,8 @@
     },
     "motor": {
       "machine": "assembler",
-      "time": 2,
-      "output": 0.333,
+      "time": 6,
+      "output": 1,
       "inputs": { "gear": 2, "control_board": 1 }
     }
   }
